@@ -1366,10 +1366,10 @@ class CustomNuScenesOfflineLocalMapDataset(CustomNuScenesDataset):
         # if not self.test_mode:
         #     # annos = self.get_ann_info(index)
         input_dict['ann_info'] = info['annotation']
-        if not self.test_mode:
-            annos = self.get_ann_info(index)
-            for k, v in annos.items():
-                input_dict['ann_info'][k] = v
+        # if not self.test_mode:
+        #     annos = self.get_ann_info(index)
+        #     for k, v in annos.items():
+        #         input_dict['ann_info'][k] = v
 
         rotation = Quaternion(input_dict['ego2global_rotation'])
         translation = input_dict['ego2global_translation']
